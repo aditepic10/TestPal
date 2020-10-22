@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TestPal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/fontAwesome.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/hero-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/tooplate-style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+          rel="stylesheet">
+
+    <script src="{% static 'common/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+<!--
+Tooplate 2112 Brunch
+https://www.tooplate.com/view/2112-brunch
+-->
+<body>
+
+<div class="wrap inner-header">
+    <header id="header">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <button id="primary-nav-button" type="button">Menu</button>
+                <div class="logo">
+                    <a href="index.html"><img src="{% static 'common/img/logo-small.png' %}" alt="Brunch Template"></a>
+                </div>
+                <nav id="primary-nav" class="dropdown cf">
+                    <ul class="dropdown menu">
+                        <!--<li><a href="#">Products</a>-->
+                        <!--<ul class="sub-menu">-->
+                        <!--<li><a href="generic-page.html">Latest Products</a></li>-->
+                        <!--<li><a href="generic-page.html">New Arrivals</a></li>-->
+                        <!--<li><a href="generic-page.html">Top Rated 2019</a></li>-->
+                        <!--<li><a href="generic-page.html">Recommended</a></li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
+                        <!--<li><a href="generic-page.html">Shop</a></li>-->
+                    </ul>
+                </nav><!-- / #primary-nav -->
+            </div>
+        </div>
+    </header>
+</div>
+
+
+<div class="heading-page">
+    <div class="container">
+        <div class="col-md-12">
+            <h2>{{TITLE}} Test</h2>
+            <div class="line-dec"></div>
+        </div>
+    </div>
+</div>
+
+<br/>
+<br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Define the terms below</h3>
+            <hr/>
+        </div>
+    </div>
+</div>
+
+<div class="services" style="padding-bottom: 0; margin-top: -10px;">
+    <div class="container">
+        {% for WORD in VOCAB %}
+        <div class="col-md-4" style="margin-bottom: 10px;">
+            <div class="service-item">
+                <div class="text">
+                    <h2>{{WORD}}</h2>
+                </div>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Fill in the blanks below</h3>
+            <hr/>
+        </div>
+    </div>
+</div>
+
+<div class="services" style="padding-bottom: 0; margin-top: -10px;">
+    <div class="container">
+        {% for X, Y in FILL_IN %}
+        <div class="col-md-12" style="margin-bottom: 10px;">
+            <div class="service-item">
+                <div class="text" style="font-size: 50px;">
+                    <p>{{X}}</p>
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Fill in the blank">
+                    <br/>
+                    <p>{{Y}}</p>
+                </div>
+            </div>
+            <br/>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="subscribe-form">
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+            <form action="#" method="get">
+                <br/>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="col-md-2 col-sm-6">
+            <div class="footer-item">
+                <h2>Founders</h2>
+                <ul>
+                    <li><a href="#">- Pranav Bangarbale</a></li>
+                    <li><a href="#">- Max Golub</a></li>
+                    <li><a href="#">- Adit Pareek</a></li>
+                    <li><a href="#">- Shreepa Parthaje</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6"><br/></div>
+        <!--<div class="col-md-2 col-sm-6">-->
+        <!--<div class="footer-item">-->
+        <!--<h2>New Arrivals</h2>-->
+        <!--<ul>-->
+        <!--<li><a href="#">-  Park brunch</a></li>-->
+        <!--<li><a href="#">-  Shoreditch</a></li>-->
+        <!--<li><a href="#">-  Activated</a></li>-->
+        <!--<li><a href="#">-  Charcoales</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 col-sm-6">-->
+        <!--<div class="footer-item">-->
+        <!--<h2>Top Rated 2018</h2>-->
+        <!--<ul>-->
+        <!--<li><a href="#">-  Messenger</a></li>-->
+        <!--<li><a href="#">-  Selvage</a></li>-->
+        <!--<li><a href="#">-  Chartreuse</a></li>-->
+        <!--<li><a href="#">-  Bushwick</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 col-sm-6">-->
+        <!--<div class="footer-item">-->
+        <!--<h2>Recommended</h2>-->
+        <!--<ul>-->
+        <!--<li><a href="#">-  Coloring</a></li>-->
+        <!--<li><a href="#">-  Pinterest</a></li>-->
+        <!--<li><a href="#">-  Mumblecore</a></li>-->
+        <!--<li><a href="#">-  Mustache</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="col-md-4 col-sm-12">
+            <div class="footer-item">
+                <h2>More About Us</h2>
+                <p>Our mission statement is simple, yet the foundation of everything we do at TestPal. We were founded
+                    to provide superior educational opportunities to all students everywhere. We know the difficulties
+                    firsthand and want to ease the experience for every student struggling.</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <!--<li><a href="#"><i class="fa fa-rss"></i></a></li>-->
+                    <!--<li><a href="#"><i class="fa fa-behance"></i></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="sub-footer">
+    <div class="container">
+        <div class="col-md-12">
+            <p>Copyright &copy; 2020 TestPal
+
+                - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static 'common / js / vendor / jquery - 1.11.2.min.js' %}'"><\/script>')</script>
+
+<script src="{% static 'common/js/vendor/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'common/js/datepicker.js' %}"></script>
+<script src="{% static 'common/js/plugins.js' %}"></script>
+<script src="{% static 'common/js/main.js' %}"></script>
+
+</body>
+</html>
